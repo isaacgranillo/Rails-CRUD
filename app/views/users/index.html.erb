@@ -1,0 +1,20 @@
+<h2>Current Users</h2>
+
+<% if @users.exists? %>
+
+	<% @users.each do |u| %>
+
+	<h3><%= u.first_name %> <%= u.last_name %></h3>
+	<p><%= u.email %></p>
+	<a href="/users/<%= u.id %>">Show</a>
+	<hr>
+
+	<% end %>
+<% else %>
+	<h4> No Current Users </h4>
+<% end %>
+
+<a href="/users/new">Add New User</a>
+
+
+
