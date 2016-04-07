@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	before_action :set_user, only: [:show, :edit, :destroy]
 	def index
 	 	@users = User.all.order('id DESC')
-		end
+	end
 
 	def new
 	end
@@ -29,7 +29,6 @@ class UsersController < ApplicationController
 	end
 
 	private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
     end
